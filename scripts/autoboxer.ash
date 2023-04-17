@@ -67,8 +67,8 @@ void main() {
 			visit_url(constants["scavenge"], true);
 		}
 
-		// 2: Hire instructor whenever available
-		else if (instructor_item != $item[none]) {
+		// 2: Hire instructor whenever available IF we are not done recruiting today
+		else if (instructor_item != $item[none] && recruit_price_limit >= computed_toddler_price) {
 			print("Hiring an instructor for "+instructor_price+" "+instructor_item);
 			retrieve_item(instructor_price, instructor_item);
 			if (item_amount(instructor_item) < instructor_price)
@@ -84,7 +84,7 @@ void main() {
 		}
 
 		// 4: First spar of the day
-		else if (get_property("_daycareFights") != 'true') {
+		else if (hippy_stone_broken() && get_property("_daycareFights") != 'true') {
 			visit_url(constants["spar"], true);
 		}
 

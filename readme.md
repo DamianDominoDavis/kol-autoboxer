@@ -4,7 +4,7 @@
 
 Try it out:
 ```sh
-git checkout DamianDominoDavis/autoboxer release
+git checkout DamianDominoDavis/kol-autoboxer release
 ```
 
 <a href="https://raw.githubusercontent.com/DamianDominoDavis/kol-flogger/main/example.png?raw=true">

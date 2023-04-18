@@ -31,7 +31,7 @@ int parseint(string s) {
 	return s.group_string("([0-9,]+)")[0,1].to_int();
 }
 
-boolean examine_daycare(boolean debug) {
+void examine_daycare(boolean debug) {
 	price_strings = page.xpath("//table//table//td[2]/text()");
 	toddler_price = price_strings[0].parseint();
 	computed_toddler_price = 10 ** (2 + get_property("_daycareRecruits").to_int());
